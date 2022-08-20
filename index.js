@@ -63,12 +63,14 @@ class Calculator {
         let integerDisplay
         if (isNaN(integerDigits)) {
             integerDisplay = ''
-        } else {
+        } 
+        else {
             integerDisplay = integerDigits.toLocaleString('en', {maximumFractionDigits: 0 })
         }
         if (decimalDigits != null) {
             return `${integerDisplay}.${decimalDigits}`        
-        } else {
+        } 
+        else {
             return integerDisplay
         }
     }
@@ -79,7 +81,8 @@ class Calculator {
         if (this.operation != null) {
             this.previousOperandTextElement.innerText = 
             `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
-        }else {
+        } 
+        else {
             this.previousOperandTextElement.innerText = ''
         }
     }
